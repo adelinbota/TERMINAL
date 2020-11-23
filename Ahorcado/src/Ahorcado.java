@@ -10,10 +10,21 @@ public class Ahorcado {
 				break;
 			case 6:
 				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
 				System.out.println("|_____________________");
 				break;
 			case 5:
-				
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|");
+				System.out.println("|_____________________");
 				break;
 			case 4:
 				
@@ -38,7 +49,7 @@ public class Ahorcado {
 		
 		//Comprueba que una letra existe en la palabra.
 		//Devuelve verdadero si se encuentra, falso en caso contrario
-		public static boolean comprobarLetraPalabra(String vPalabraSecreta[], String letra) {
+		public static boolean comprobarLetraPalabra(String vPalabraSecreta[], String letra, String vFallos[], String vAciertos[]) {
 			boolean encontrado=false;
 			
 			return encontrado;
@@ -61,12 +72,14 @@ public class Ahorcado {
 			
 			//Imprimir los fallos
 			for (int i = 0; i < vFallos.length; i++) {
-			 
+			if (!vFallos[i].equals(" ")) {
+				System.out.println(vFallos[i]);
+			}
 			}
 			
 			//Imprimir los aciertos
 			for (int i = 0; i < vAciertos.length; i++) {
-				
+			System.out.println();
 			}
 		}
 		
@@ -87,7 +100,7 @@ public class Ahorcado {
 				System.out.println("Dime una letra");
 				letra = leer.next();
 				//2º Comprobar si la letra está en la palabra
-				
+				comprobarLetraPalabra(vPalabraSecreta, letra, vFallos, vAciertos);
 				//3º Dibujar muñeco
 				dibujarMuneco(vidas);
 				//4º Dibujar aciertos y errores
