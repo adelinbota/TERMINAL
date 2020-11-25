@@ -100,7 +100,7 @@ public class Ahorcado {
 				System.out.println("Dime una letra");
 				letra = leer.next();
 				//2º Comprobar si la letra está en la palabra
-				comprobarLetraPalabra(vPalabraSecreta, letra, vFallos, vAciertos);
+				comprobarLetraPalabra(letra, vPalabraSecreta, vFallos, vAciertos);
 				//3º Dibujar muñeco
 				dibujarMuneco(vidas);
 				//4º Dibujar aciertos y errores
