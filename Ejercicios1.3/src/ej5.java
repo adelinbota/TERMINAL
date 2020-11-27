@@ -10,6 +10,15 @@ public class ej5 {
 		System.out.println("");
 		System.out.println("      Marco Asensio                                            Eden Hazard");
 		System.out.println("                                    Karim Benzema");
+		System.out.println("");
+		System.out.println("                      Lautaro Martínez        Romelu Lukaku ");
+		System.out.println("");
+		System.out.println("  Ivan Perisic        Arturo Vidal            Nicolo Barella          Achraf Hakimi");
+		System.out.println("                                 Marcelo Brozovic");
+		System.out.println("");
+		System.out.println("               Skriniar               De Vrij              Bastoni");
+		System.out.println("");
+		System.out.println("                                  Samir Handanovic");
 		
 
 	}

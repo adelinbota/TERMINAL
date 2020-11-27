@@ -30,8 +30,9 @@ public class agenda {
 		nombre =  leer.nextLine();
 		System.out.println("Dime el numero del contacto");
 		numero = leer.nextInt();
+		int aux = 0;
 		for (int i=0; i>mContactos.length(); i++) {
-			
+
 		}
 		System.out.println("El contacto es " + nombre + "y su numero " + numero);
 	}
@@ -41,8 +42,14 @@ public class agenda {
 		String nombre;
 		nombre =  leer.nextLine();
 		for (int i=0; i>mContactos.length(); i++) {
+			if (condition) {
+				System.out.println("El contacto que desea buscar es");
+			} else {
+				System.out.println("El contacto que busca no existe");
+			}
 			
 		}
+		
 	}
 	public static void borrarContacto(String mContactos) {
 		System.out.println("Dime el nombre del contacto que desea buscar");
@@ -52,6 +59,7 @@ public class agenda {
 		for (int i=0; i>mContactos.length(); i++) {
 			
 		}
+		
 	}
 	public static void editarContacto(String mContactos) {
 		System.out.println("Dime el numero del contacto que deseas editar");
@@ -59,11 +67,16 @@ public class agenda {
 		int numero;
 		numero =  leer.nextInt();
 		for (int i=0; i>mContactos.length(); i++) {
-			
+			if (condition) {
+				System.out.println("El contacto que desea editar se ha encontrado");
+				System.out.println("");
+			} else {
+
+			}
 		}
 	}
 	public static void mostrarContacto(String mContactos) {
-		System.out.println("Esta es la lista de contactos que tienes actualmente");
+		System.out.println("Esta es la lista de contactos que tienes actualmente " + mContactos);
 		
 	}
 	public static void main(String[] args) {
@@ -105,7 +118,6 @@ public class agenda {
 		default:
 			break;
 		}
-
 	}
 
 }
