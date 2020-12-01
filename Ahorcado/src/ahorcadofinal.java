@@ -2,7 +2,7 @@ package Agenda;
 import java.util.Random;
 import java.util.Scanner;
 
-public class agenda {
+public class Ahorcado {
 
 	public static void main(String[] args) {
 		String palabraSecreta = conseguirPalabraSecreta();
@@ -29,7 +29,8 @@ public class agenda {
 					 System.out.println("No has acertado la letra, -1 vidas, por lo tanto te quedan " +vidas+ " vidas. Dime otra");
 					 if (vidas == 5) {
 						 System.out.println("____________________________");
-						 letra = leer.nextLine().charAt(1);
+						 char letra = leer.nextLine().charAt(0);
+						 
 					 }
 					 if (vidas == 4) {
 						 System.out.println("              |");
@@ -40,7 +41,7 @@ public class agenda {
 						 System.out.println("              |");
 						 System.out.println("              |");
 						 System.out.println("______________|_____________");
-						 letra = leer.nextLine().charAt(2);
+						 char letra = leer.nextLine().charAt(0);
 					 }
 					 if (vidas ==3) {
 						 System.out.println("              ______________");
@@ -52,7 +53,7 @@ public class agenda {
 						 System.out.println("              |");
 						 System.out.println("              |");
 						 System.out.println("______________|_____________");
-						 letra = leer.nextLine().charAt(3);
+						 char letra = leer.nextLine().charAt(0);
 					 }
 					 if (vidas == 2) {
 						 System.out.println("              ______________");
@@ -68,7 +69,7 @@ public class agenda {
 						 System.out.println("              |");
 						 System.out.println("              |");
 						 System.out.println("______________|_____________");
-						 letra = leer.nextLine().charAt(4);
+						 char letra = leer.nextLine().charAt(0);
 					 }
 					 if (vidas ==1) {
 						 	System.out.println("                 _____________________");
@@ -84,7 +85,7 @@ public class agenda {
 			                System.out.println("                |                 /   |     \\ ");
 			                System.out.println("                |                     |   ");
 			                System.out.println("  ______________|_______________");
-			                letra = leer.nextLine().charAt(5);
+			                char letra = leer.nextLine().charAt(0);
 					 }
 					 if (vidas ==0) {
 						 System.out.println("                     _____________________");
@@ -126,7 +127,7 @@ public class agenda {
 	}
 
 	public static String conseguirPalabraSecreta() {
-		String[] palabras = { "mola", "hola", "adios" };
+		String[] palabras = { "mola", "mola", "adios" };
 		Random r = new Random();
 		int n = r.nextInt(palabras.length);
 
