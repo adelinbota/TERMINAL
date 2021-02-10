@@ -41,7 +41,7 @@ public class Persona {
 		return "Persona [nombre=" + nombre + ", apellidos=" + apellidos + ", numerotel=" + numerotel + "]";
 	}
 
-	public char[] mostarDatos(int longitudlinea) {
+	public String mostarDatos(int longitudlinea) {
 		
 		return null;
 	}
