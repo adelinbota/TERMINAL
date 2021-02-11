@@ -3,7 +3,9 @@ package pruebas_ficheros;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class IODatos {
@@ -96,6 +98,9 @@ public class IODatos {
 				String nombre = null, apellido = null;
 				String puntos ="";
 				int nip;
+				System.out.println("Dime un número nip");
+				Scanner leer = new Scanner(System.in);
+				nip = leer.nextInt();
 				nip = Integer.parseInt(lineas.substring(0, 6));
 				String aux = lineas.substring(6).trim();
 				int pos = aux.indexOf(",");
@@ -109,5 +114,22 @@ public class IODatos {
 				//String puntos = null;
 				System.out.println(apellido + " " + nombre + "" + puntos + "" + nip);
 		}
+			private static void escribirFichero(String nombrefichero, String apellido, String nombre, String puntos, int nip) {
+				String f = nombrefichero;
+				File fch = new File(f);
+				
+				if (!fch.exists()) {
+					try {
+						fch.createNewFile();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+				try (FileWriter fw = new FileWriter(fch, true);
+					PrintWriter pw = new PrintWriter(fw)){
+					pw.println(apellido + nombre + puntos + " " + nip);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
 		}
-

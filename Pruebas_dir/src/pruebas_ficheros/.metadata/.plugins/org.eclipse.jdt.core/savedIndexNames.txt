@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+C:\Users\adebo\OneDrive\Escritorio\Nueva carpeta\Agendade\TERMINAL\Pruebas_dir\src\pruebas_ficheros\.metadata\.plugins\org.eclipse.jdt.core
