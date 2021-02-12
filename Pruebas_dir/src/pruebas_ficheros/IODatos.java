@@ -48,7 +48,9 @@ public class IODatos {
 			String nombre = null, apellido = null;
 			String puntos ="";
 			int nip;
+			String nip2;
 			nip = Integer.parseInt(linea.substring(0, 6));
+			nip2 = linea.substring(0, 6);
 			String aux = linea.substring(6).trim();
 			int pos = aux.indexOf(",");
 			apellido = aux.substring(0, pos+1);
@@ -59,13 +61,13 @@ public class IODatos {
 			p = new Persona(nombre,apellido,nip);
 			//System.out.println(p.mostarDatos(longitudlinea));
 			//String puntos = null;
-			System.out.println(apellido + " " + nombre + "" + puntos + "" + nip);
+			System.out.println(apellido + " " + nombre + "" + puntos + "" + nip2);
 		}
 		public static void mostrar_nip(String nombrefichero, int longitudlinea) {
 			File b = new File(nombrefichero);
 			FileReader fr = null;
 			Scanner leer1 = null;
-			
+			System.out.println("Dime un nip y te dirÃ© un nombre");
 			if (!b.exists()) {
 				try {
 					b.createNewFile();
@@ -98,7 +100,7 @@ public class IODatos {
 				String nombre = null, apellido = null;
 				String puntos ="";
 				int nip;
-				System.out.println("Dime un número nip");
+				System.out.println("Dime un nï¿½mero nip");
 				Scanner leer = new Scanner(System.in);
 				nip = leer.nextInt();
 				nip = Integer.parseInt(lineas.substring(0, 6));
