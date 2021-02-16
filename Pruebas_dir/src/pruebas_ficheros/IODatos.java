@@ -9,36 +9,34 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class IODatos {
-
-		public static void mostrar (String nombrefichero, int longitudlinea) {
-			File a = new File(nombrefichero);
-			FileReader fr = null;
-			Scanner leer = null;
-			
-			if (!a.exists()) {
-				try {
-					a.createNewFile();
-				} catch (IOException e) {
-					e.printStackTrace();
+	public static void mostrar (String nombrefichero, int longitudlinea) {
+		File a = new File(nombrefichero);
+		FileReader fr = null;
+		Scanner leer = null;
+		if (!a.exists()) {
+			try {
+				a.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
 				}
 			}
-			try {
-				fr = new FileReader(a);
-				leer = new Scanner(fr);
+		try {
+			fr = new FileReader(a);
+			leer = new Scanner(fr);
 				
-				while(leer.hasNext()) {
-					String linea = leer.nextLine();
-					formatearLinea(linea, longitudlinea);
+			while(leer.hasNext()) {
+				String linea = leer.nextLine();
+				formatearLinea(linea, longitudlinea);
 					
 				}
-			} catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e) {
 				e.printStackTrace();
-			}finally {
-				try {
-					leer.close();
-					fr.close();
-				} catch (IOException e) {
-					e.printStackTrace();
+		}finally {
+			try {
+				leer.close();
+				fr.close();
+			} catch (IOException e) {
+				e.printStackTrace();
 				}
 			}
 		}
